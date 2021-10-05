@@ -1,3 +1,3 @@
 <?php
 
-Route::get('folders/{id}/tasks', 'TasksController@index') -> name('tasks.index');
+Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
