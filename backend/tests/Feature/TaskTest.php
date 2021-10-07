@@ -48,11 +48,11 @@ class TaskTest extends TestCase
     {
         $response = $this->post('/folders/1/tasks/create', [
             'title' => 'Sample task',
-            'due_date' => Carbon::yesterday()->format(Y/m/d),
+            'due_date' => Carbon::yesterday()->format('Y/m/d'),
         ]);
 
         $response->assertSessionHasErrors([
-            'due_date' => '期限日 には今日以降の日付を入力しください。'
+            'due_date' => '期限日 には今日以降の日付を入力して下さい。'
         ]);
     }
 }
