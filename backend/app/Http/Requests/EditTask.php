@@ -27,9 +27,9 @@ class EditTask extends CreateTask
         ];
     }
 
-    public function messsages()
+    public function messages()
     {
-        $messages = parent::messsages();
+        $messages = parent::messages();
 
         $status_labels = array_map(function($item) {
             return $item['label'];
@@ -38,7 +38,7 @@ class EditTask extends CreateTask
         $status_labels = implode('、', $status_labels);
 
         return $messages + [
-            'status.in' => 'attribute には' . $status_labels. 'のいづれかを指定してください。',
+            'status.in' => ':attribute には ' . $status_labels. ' のいずれかを指定してください。',
         ];
     }
 }
